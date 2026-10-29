@@ -1,10 +1,48 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
+# --- uv & Virtual Environments ---
+.venv/
+uv.lock.bak
 
-# Virtual environments
-.venv
+# --- Python Bytecode & Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Jupyter Notebook Artifacts ---
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+.virtual_documents/
+
+# --- Environment & Secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Project Data & Large Artifacts ---
+data/
+datasets/
+*.csv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.sqlite3
+*.db
+
+# --- Model Weights & Checkpoints ---
+models/
+checkpoints/
+*.pt
+*.pth
+*.onnx
+*.bin
+*.pkl
+
+# --- OS & Editor Metadata ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
