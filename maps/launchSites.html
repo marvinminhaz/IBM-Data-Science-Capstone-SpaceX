@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ccf3c8ca88ab56077c511556ed213223 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ccf3c8ca88ab56077c511556ed213223" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ccf3c8ca88ab56077c511556ed213223 = L.map(
+                "map_ccf3c8ca88ab56077c511556ed213223",
+                {
+                    center: [29.559684888503615, -95.0830971930759],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e44cc571388713d510e77a61d9855de4 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 16,
+  "maxNativeZoom": 16,
+  "noWrap": false,
+  "attribution": "Tiles \u0026copy; Esri \u0026mdash; Esri, DeLorme, NAVTEQ",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e44cc571388713d510e77a61d9855de4.addTo(map_ccf3c8ca88ab56077c511556ed213223);
+        
+    
+            var tile_layer_aa36e0f3e6b1335ad578872430c1093d = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 16,
+  "maxNativeZoom": 16,
+  "noWrap": false,
+  "attribution": "Tiles \u0026copy; Esri \u0026mdash; Esri, DeLorme, NAVTEQ",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_aa36e0f3e6b1335ad578872430c1093d.addTo(map_ccf3c8ca88ab56077c511556ed213223);
+        
+    
+            var circle_e6e91991bed771a7ad6b9a259ab97b35 = L.circle(
+                [28.56230197, -80.57735648],
+                {"bubblingMouseEvents": true, "color": "#00e5ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00e5ff", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000, "stroke": true, "weight": 1.5}
+            ).addTo(map_ccf3c8ca88ab56077c511556ed213223);
+        
+    
+        var popup_8720e685464d5b5c356c0911b7282a9d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c1ec9ac30a7299a23899753573b493ac = $(`<div id="html_c1ec9ac30a7299a23899753573b493ac" style="width: 100.0%; height: 100.0%;">CCAFS LC-40</div>`)[0];
+                popup_8720e685464d5b5c356c0911b7282a9d.setContent(html_c1ec9ac30a7299a23899753573b493ac);
+            
+        
+
+        circle_e6e91991bed771a7ad6b9a259ab97b35.bindPopup(popup_8720e685464d5b5c356c0911b7282a9d)
+        ;
+
+        
+    
+    
+            var circle_marker_2328388a14070391fd250d3fd7cca79c = L.circleMarker(
+                [28.56230197, -80.57735648],
+                {"bubblingMouseEvents": true, "color": "#ffffff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00e5ff", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1.5}
+            ).addTo(map_ccf3c8ca88ab56077c511556ed213223);
+        
+    
+            var marker_7c196577a95abb4b4559fe2a498ac9d8 = L.marker(
+                [28.56230197, -80.57735648],
+                {
+}
+            ).addTo(map_ccf3c8ca88ab56077c511556ed213223);
+        
+    
+            var div_icon_d1531d9c4bd691b930a6768fec466975 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        font-family: -apple-system, BlinkMacSystemFont, \u0027Segoe UI\u0027, Roboto, Helvetica, Arial, sans-serif;\n        font-size: 11px;\n        font-weight: 600;\n        letter-spacing: 0.5px;\n        color: #00e5ff;\n        background: rgba(18, 18, 18, 0.75);\n        border: 1px solid #00e5ff44;\n        border-radius: 4px;\n        padding: 2px 7px;\n        white-space: nowrap;\n        box-shadow: 0 2px 6px rgba(0,0,0,0.6);\n        pointer-events: none;\n    \"\u003e\n        CCAFS LC-40\n    \u003c/div\u003e\n    ",
+  "iconSize": [150, 24],
+  "iconAnchor": [-10, 12],
+  "className": "empty",
+});
+        
+    
+                marker_7c196577a95abb4b4559fe2a498ac9d8.setIcon(div_icon_d1531d9c4bd691b930a6768fec466975);
+            
+    
+            var circle_db8c7a4da6eb4681a67ba7056df2a0ae = L.circle(
+                [28.56319718, -80.57682003],
+                {"bubblingMouseEvents": true, "color": "#00e5ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00e5ff", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000, "stroke": true, "weight": 1.5}
+            ).addTo(map_ccf3c8ca88ab56077c511556ed213223);
+        
+    
+        var popup_9d5419bfb3d13119487e1cfa1bc3ee13 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44f057d77f093e8563a7c4dffb685670 = $(`<div id="html_44f057d77f093e8563a7c4dffb685670" style="width: 100.0%; height: 100.0%;">CCAFS SLC-40</div>`)[0];
+                popup_9d5419bfb3d13119487e1cfa1bc3ee13.setContent(html_44f057d77f093e8563a7c4dffb685670);
+            
+        
+
+        circle_db8c7a4da6eb4681a67ba7056df2a0ae.bindPopup(popup_9d5419bfb3d13119487e1cfa1bc3ee13)
+        ;
+
+        
+    
+    
+            var circle_marker_1432ef6d3832a832a8cc69addfcae093 = L.circleMarker(
+                [28.56319718, -80.57682003],
+                {"bubblingMouseEvents": true, "color": "#ffffff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00e5ff", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1.5}
+            ).addTo(map_ccf3c8ca88ab56077c511556ed213223);
+        
+    
+            var marker_280c99cb5720599498131450b73adb5e = L.marker(
+                [28.56319718, -80.57682003],
+                {
+}
+            ).addTo(map_ccf3c8ca88ab56077c511556ed213223);
+        
+    
+            var div_icon_e91f8aa8aa09553357b065e207eba829 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        font-family: -apple-system, BlinkMacSystemFont, \u0027Segoe UI\u0027, Roboto, Helvetica, Arial, sans-serif;\n        font-size: 11px;\n        font-weight: 600;\n        letter-spacing: 0.5px;\n        color: #00e5ff;\n        background: rgba(18, 18, 18, 0.75);\n        border: 1px solid #00e5ff44;\n        border-radius: 4px;\n        padding: 2px 7px;\n        white-space: nowrap;\n        box-shadow: 0 2px 6px rgba(0,0,0,0.6);\n        pointer-events: none;\n    \"\u003e\n        CCAFS SLC-40\n    \u003c/div\u003e\n    ",
+  "iconSize": [150, 24],
+  "iconAnchor": [-10, 12],
+  "className": "empty",
+});
+        
+    
+                marker_280c99cb5720599498131450b73adb5e.setIcon(div_icon_e91f8aa8aa09553357b065e207eba829);
+            
+    
+            var circle_3edfea61cbb8f58672adcf1fa5a27639 = L.circle(
+                [28.57325457, -80.64689529],
+                {"bubblingMouseEvents": true, "color": "#00e5ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00e5ff", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000, "stroke": true, "weight": 1.5}
+            ).addTo(map_ccf3c8ca88ab56077c511556ed213223);
+        
+    
+        var popup_02a1cf8f6ca2d41db679b9686728ad15 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d19f1f59eae434990b0d260e0f9484d = $(`<div id="html_0d19f1f59eae434990b0d260e0f9484d" style="width: 100.0%; height: 100.0%;">KSC LC-39A</div>`)[0];
+                popup_02a1cf8f6ca2d41db679b9686728ad15.setContent(html_0d19f1f59eae434990b0d260e0f9484d);
+            
+        
+
+        circle_3edfea61cbb8f58672adcf1fa5a27639.bindPopup(popup_02a1cf8f6ca2d41db679b9686728ad15)
+        ;
+
+        
+    
+    
+            var circle_marker_61e4dbf3240cc6a40c6ef0ec1a40b59e = L.circleMarker(
+                [28.57325457, -80.64689529],
+                {"bubblingMouseEvents": true, "color": "#ffffff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00e5ff", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1.5}
+            ).addTo(map_ccf3c8ca88ab56077c511556ed213223);
+        
+    
+            var marker_8a0deedfcc48bc5cf82707bbdf6fdaef = L.marker(
+                [28.57325457, -80.64689529],
+                {
+}
+            ).addTo(map_ccf3c8ca88ab56077c511556ed213223);
+        
+    
+            var div_icon_76a195480c2741f7340982187c64192a = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        font-family: -apple-system, BlinkMacSystemFont, \u0027Segoe UI\u0027, Roboto, Helvetica, Arial, sans-serif;\n        font-size: 11px;\n        font-weight: 600;\n        letter-spacing: 0.5px;\n        color: #00e5ff;\n        background: rgba(18, 18, 18, 0.75);\n        border: 1px solid #00e5ff44;\n        border-radius: 4px;\n        padding: 2px 7px;\n        white-space: nowrap;\n        box-shadow: 0 2px 6px rgba(0,0,0,0.6);\n        pointer-events: none;\n    \"\u003e\n        KSC LC-39A\n    \u003c/div\u003e\n    ",
+  "iconSize": [150, 24],
+  "iconAnchor": [-10, 12],
+  "className": "empty",
+});
+        
+    
+                marker_8a0deedfcc48bc5cf82707bbdf6fdaef.setIcon(div_icon_76a195480c2741f7340982187c64192a);
+            
+    
+            var circle_2454404b40e955ab3b9e159aaa5bdc58 = L.circle(
+                [34.63283416, -120.6107455],
+                {"bubblingMouseEvents": true, "color": "#00e5ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00e5ff", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000, "stroke": true, "weight": 1.5}
+            ).addTo(map_ccf3c8ca88ab56077c511556ed213223);
+        
+    
+        var popup_adf997cdb7adeef2b4e6176d1851acb9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bafa78efdc616b3081cac065bc360481 = $(`<div id="html_bafa78efdc616b3081cac065bc360481" style="width: 100.0%; height: 100.0%;">VAFB SLC-4E</div>`)[0];
+                popup_adf997cdb7adeef2b4e6176d1851acb9.setContent(html_bafa78efdc616b3081cac065bc360481);
+            
+        
+
+        circle_2454404b40e955ab3b9e159aaa5bdc58.bindPopup(popup_adf997cdb7adeef2b4e6176d1851acb9)
+        ;
+
+        
+    
+    
+            var circle_marker_d28c9b7d00043704ef5ceb2aafb1d044 = L.circleMarker(
+                [34.63283416, -120.6107455],
+                {"bubblingMouseEvents": true, "color": "#ffffff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00e5ff", "fillOpacity": 1.0, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 1.5}
+            ).addTo(map_ccf3c8ca88ab56077c511556ed213223);
+        
+    
+            var marker_d5f30babfcb92c905c52b773894bad23 = L.marker(
+                [34.63283416, -120.6107455],
+                {
+}
+            ).addTo(map_ccf3c8ca88ab56077c511556ed213223);
+        
+    
+            var div_icon_76ce8b342d5154140d57fbc98efd90ea = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        font-family: -apple-system, BlinkMacSystemFont, \u0027Segoe UI\u0027, Roboto, Helvetica, Arial, sans-serif;\n        font-size: 11px;\n        font-weight: 600;\n        letter-spacing: 0.5px;\n        color: #00e5ff;\n        background: rgba(18, 18, 18, 0.75);\n        border: 1px solid #00e5ff44;\n        border-radius: 4px;\n        padding: 2px 7px;\n        white-space: nowrap;\n        box-shadow: 0 2px 6px rgba(0,0,0,0.6);\n        pointer-events: none;\n    \"\u003e\n        VAFB SLC-4E\n    \u003c/div\u003e\n    ",
+  "iconSize": [150, 24],
+  "iconAnchor": [-10, 12],
+  "className": "empty",
+});
+        
+    
+                marker_d5f30babfcb92c905c52b773894bad23.setIcon(div_icon_76ce8b342d5154140d57fbc98efd90ea);
+            
+</script>
+</html>
