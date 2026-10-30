@@ -22,15 +22,7 @@ __pycache__/
 !.env.example
 
 # --- Project Data & Large Artifacts ---
-data/
-datasets/
-*.csv
-*.parquet
-*.feather
-*.h5
-*.hdf5
-*.sqlite3
-*.db
+
 
 # --- Model Weights & Checkpoints ---
 models/
