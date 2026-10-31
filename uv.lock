@@ -657,6 +657,11 @@ dependencies = [
     { name = "wget" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "ipykernel" },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "folium", specifier = ">=0.20.0" },
@@ -677,6 +682,9 @@ requires-dist = [
     { name = "tqdm", specifier = ">=4.70.1" },
     { name = "wget", specifier = ">=3.2" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "ipykernel", specifier = ">=7.4.0" }]
 
 [[package]]
 name = "idna"

@@ -21,3 +21,8 @@ dependencies = [
     "tqdm>=4.70.1",
     "wget>=3.2",
 ]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+]
