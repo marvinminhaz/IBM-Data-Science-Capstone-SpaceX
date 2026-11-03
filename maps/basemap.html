@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_b1f117c8fece63512da2c52436889d35 {
+                #map_bb0b924912f8873c538c6ee0a672e1ea {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -54,19 +54,19 @@
 <body>
     
     
-            <div class="folium-map" id="map_b1f117c8fece63512da2c52436889d35" ></div>
+            <div class="folium-map" id="map_bb0b924912f8873c538c6ee0a672e1ea" ></div>
         
 </body>
 <script>
     
     
-            var map_b1f117c8fece63512da2c52436889d35 = L.map(
-                "map_b1f117c8fece63512da2c52436889d35",
+            var map_bb0b924912f8873c538c6ee0a672e1ea = L.map(
+                "map_bb0b924912f8873c538c6ee0a672e1ea",
                 {
                     center: [29.559684888503615, -95.0830971930759],
                     crs: L.CRS.EPSG3857,
                     ...{
-  "zoom": 7,
+  "zoom": 4,
   "zoomControl": true,
   "preferCanvas": false,
 }
@@ -78,7 +78,7 @@
 
         
     
-            var tile_layer_bd54142a085a897a3fb534313924d659 = L.tileLayer(
+            var tile_layer_c84adfd394278e93dfb7827c428b9c1d = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -95,7 +95,48 @@
             );
         
     
-            tile_layer_bd54142a085a897a3fb534313924d659.addTo(map_b1f117c8fece63512da2c52436889d35);
+            tile_layer_c84adfd394278e93dfb7827c428b9c1d.addTo(map_bb0b924912f8873c538c6ee0a672e1ea);
         
+    
+            var circle_marker_cd57de6720baccf0a3a9d7526ae827ff = L.circleMarker(
+                [29.559684888503615, -95.0830971930759],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_bb0b924912f8873c538c6ee0a672e1ea);
+        
+    
+        var popup_9685f5b52194f95964fb70e9cb97e288 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_406bde2da37907fbc46a3ecdc0dc74ee = $(`<div id="html_406bde2da37907fbc46a3ecdc0dc74ee" style="width: 100.0%; height: 100.0%;">NASA Jhonson Space Center</div>`)[0];
+                popup_9685f5b52194f95964fb70e9cb97e288.setContent(html_406bde2da37907fbc46a3ecdc0dc74ee);
+            
+        
+
+        circle_marker_cd57de6720baccf0a3a9d7526ae827ff.bindPopup(popup_9685f5b52194f95964fb70e9cb97e288)
+        ;
+
+        
+    
+    
+            var marker_c2b1e466157e54dd80e0e93a7afe87a4 = L.marker(
+                [29.559684888503615, -95.0830971930759],
+                {
+}
+            ).addTo(map_bb0b924912f8873c538c6ee0a672e1ea);
+        
+    
+            var div_icon_c271477474a2a97f973ec850dfc0b9d3 = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        font-size: 12px;\n        font-weight: 600;\n        padding: 2px 7px;\n        box-shadow: 0 2px 6px rgba(0,0,0,0.4);\n        pointer-events: none\"\u003e \n        NASA JSC \n    \u003c/div\u003e\n    ",
+  "iconSize": [85, 24],
+  "iconAnchor": [-15, 12],
+  "className": "empty",
+});
+        
+    
+                marker_c2b1e466157e54dd80e0e93a7afe87a4.setIcon(div_icon_c271477474a2a97f973ec850dfc0b9d3);
+            
 </script>
 </html>
