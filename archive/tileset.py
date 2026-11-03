@@ -69,7 +69,51 @@ theme_color = "#00e5ff"       # High-contrast Cyan (Alternative: '#ff9100' for a
 bg_badge = "rgba(18, 18, 18, 0.75)"
 
 
+#Basic theme for initial markings
+theme_color = "#00e5ff"       # High-contrast Cyan (Alternative: '#ff9100' for aerospace amber)
+bg_badge = "rgba(18, 18, 18, 0.75)"
 
+# Create a blue circle at NASA Johnson Space Center's coordinate with a popup label showing its name
+folium.Circle(
+    location=nasa_coordinate,
+    radius=1000,
+    color=theme_color,
+    fill=True,
+    popup='Nasa Johnson Space Center'
+).add_to(site_map)
+
+label_html = f"""
+    <div style="
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: {theme_color};
+        background: {bg_badge};
+        border: 1px solid {theme_color}44;
+        border-radius: 4px;
+        padding: 2px 7px;
+        white-space: nowrap;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+        pointer-events: none;
+    ">
+        NASA JSC
+    </div>
+    """
+
+folium.Marker(
+    location=nasa_coordinate,
+    icon=DivIcon(
+            icon_size=(150, 24),    # Explicit bounding box prevents truncation
+            icon_anchor=(-10, 12),  # Offsets label 10px to the right and vertically centered
+            html=label_html,
+        )
+).add_to(site_map)
+
+if not os.path.exists('../maps/basewcircles.html'):
+    site_map.save('../maps/basewcircles.html')
+
+site_map
 
 
 # Start location is NASA Johnson Space Center
