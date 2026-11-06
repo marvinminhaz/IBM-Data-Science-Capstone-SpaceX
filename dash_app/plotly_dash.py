@@ -37,7 +37,7 @@ dropdown_options = [{'label': 'All Sites', 'value': 'ALL'}] + [
 
 #DASH APP
 app = dash.Dash(__name__)
-app.layout = html.Div(children=[
+app.layout = html.Div(style={'fontFamily': 'sans-serif', 'padding': '20px', 'maxWidth': '1200px', 'margin': 'auto'}, children=[
     html.H1(
         'SpaceX Launch Records Dashboard',
         style={'text-align': 'center', 'color': '#503D36', 'font-size': '40'}
@@ -55,8 +55,8 @@ app.layout = html.Div(children=[
     html.P('Payload range (Kg):'),
 
     dcc.RangeSlider(
-        dash_df.Payload_Mass_kg.min(), 
-        dash_df.Payload_Mass_kg.max(), 
+        min=dash_df.Payload_Mass_kg.min(), 
+        max=dash_df.Payload_Mass_kg.max(), 
         value=[2121, 3412.50], id='payload-slider'
     ),
 
@@ -81,5 +81,29 @@ def get_pie_chart(entered_site):
         return fig
 
 
+@app.callback(
+    Output(component_id='success-payload-scatter-chart', component_property='figure'),
+    Input(component_id='site-dropdown', component_property='value'),
+    Input(component_id='payload-slider', component_property='value')
+)
+def get_scatter_chart(entered_site, value):
+    df = dash_df[dash_df['Payload_Mass_kg'].between(value[0], value[1])]
+
+    if entered_site != 'ALL':
+        df = df[df['Launch_Site']== entered_site]
+        title = f'Correlation between Payload and Success for {entered_site}'
+    else:
+        title = f'Correlation between Payload and Success for all sites'
+
+    fig = px.scatter(
+        data_frame=df, 
+        x='Payload_Mass_kg', y='class', 
+        title=title,
+        color='Booster_Version_Category'
+    )
+
+    return fig
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
